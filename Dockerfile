@@ -1,4 +1,4 @@
-FROM openjdk:11
-ADD target/UserLogin-0.0.1-SNAPSHOT.jar UserLogin-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar","UserLogin-0.0.1-SNAPSHOT.jar"]
-EXPOSE 8081
+FROM maven:3-amazoncorretto-17
+ADD target/users-login-api-docker.jar users-login-api-docker.jar
+ENTRYPOINT ["java", "-jar","users-login-api-docker.jar"]
+EXPOSE 8080
